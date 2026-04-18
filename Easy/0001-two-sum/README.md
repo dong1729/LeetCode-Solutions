@@ -1,18 +1,20 @@
-# [0001. Two Sum](https://leetcode.com/problems/two-sum/)
+# 0001 - Two Sum (Easy)
 
-## 📝 Mô tả bài toán
-(Copy ngắn gọn đề bài hoặc tóm tắt ý chính tại đây)
+## 🔗 Link bài tập
+[LeetCode - Two Sum](https://leetcode.com/problems/two-sum/)
+
+## 📖 Đề bài tóm tắt
+Cho một mảng số nguyên `nums` và một số `target`. Tìm vị trí (index) của hai số trong mảng sao cho tổng của chúng bằng `target`.
 
 ## 💡 Ý tưởng giải quyết
-- **Hướng tiếp cận:** Sử dụng Hash Map để tối ưu thời gian tìm kiếm số bù (complement).
-- **Các bước thực hiện:**
-  1. Khởi tạo một Map trống.
-  2. Duyệt qua mảng, tính `target - nums[i]`.
-  3. ...
+Sử dụng **Hash Map** (`std::unordered_map`) để lưu trữ các giá trị đã đi qua.
+1. Với mỗi số `nums[i]`, tính số cần tìm là `complement = target - nums[i]`.
+2. Kiểm tra `complement` có trong Map chưa.
+3. Nếu có, trả về cặp index. Nếu chưa, lưu `nums[i]` vào Map.
 
 ## 📊 Độ phức tạp
-- **Thời gian:** $O(n)$ - Duyệt mảng một lần.
-- **Không gian:** $O(n)$ - Lưu trữ tối đa $n$ phần tử trong Map.
+- **Thời gian:** $O(n)$ - Do chỉ duyệt mảng một lần.
+- **Không gian:** $O(n)$ - Trường hợp xấu nhất cần lưu $n$ phần tử vào Map.
 
 ## 💻 Mã nguồn
 - [C++ Solution](./solution.cpp)
